@@ -1,43 +1,41 @@
 require('../styles/components/article.scss')
 import React from 'react'
+import { Link } from 'react-router';
 
 class SingleArticle extends React.Component{
     render(){
         return(
             <li className="single-article">
-                <div className="article-detail-fl">
-                    <div className="fl">
-                       
+                 <Link to={{ pathname: '/articleDetail/'+ this.props.data.id, query:{foo: 'bar'}}}> 
+                    <div className="article-detail-fl">
+                        <div className="fl">
+                        {this.props.data.title}
+                        </div>
+                        <div className="fr">
+                               {/* <img src={this.props.data.images[0]} alt=""/>    */}
+                        </div>
                     </div>
-                    <div className="fr">
-                        <img src="" alt=""/>
-                    </div>
-                </div>
+                 </Link> 
             </li>
         )
     }
 }
+
 class ArticleList extends React.Component{
     render(){
+        let hotNewList = [];
+        this.props.ArticleList.forEach((value,index)=>{
+            hotNewList.push(<SingleArticle data = {value} key = {index}/>);
+        });
         return(
             <div>
                 <ul className="article-container">
-                    <SingleArticle data={this.data}/>
+                     {hotNewList} 
                 </ul>
             </div>
         )
     }
-    componentDidMount(){
-        $.ajax({
-            url: "https://news-at.zhihu.com/api/4/news/latest",
-            type: "GET",
-            dataType: "json",
-            success: function(data){
-               console.log(data);
-            }
-         });
-        
-    }
+    
 }
 
 export default ArticleList;

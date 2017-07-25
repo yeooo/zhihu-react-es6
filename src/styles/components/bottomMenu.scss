@@ -1,0 +1,40 @@
+.bottom-menue{
+    position: fixed;
+    background-color: #fff;
+    height: 1rem;
+    left: 0;
+    right: 0;
+    bottom:0;
+    display: flex;
+    text-align: center;
+    // line-height: 1.2rem;
+    div{
+        width: 50%;
+        position: relative;
+    }
+    span{
+        display: inline-block;
+        width: .7rem;
+        height: .7rem;
+        margin-top: .2rem;
+    }
+    .popularity{
+        background: url('../../images/bottomMenu/dianzan.png') no-repeat left top;
+        background-size:100% 100%; 
+    }
+    .comments{
+        background: url('../../images/bottomMenu/comment.png') no-repeat left top;
+        background-size:100% 100%; 
+    }
+    em{
+        background-color:#105CB6;
+        color: #fff;
+        text-align: center;
+        line-height: .3rem;
+        position: absolute;
+        top: -0px;
+        left: 54%;
+        padding: .1rem .1rem;
+        font-style: normal;
+    }
+}
