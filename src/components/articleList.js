@@ -6,7 +6,7 @@ class SingleArticle extends React.Component{
     render(){
         return(
             <li className="single-article">
-                 <Link to={{ pathname: '/articleDetail/'+ this.props.data.id, query:{foo: 'bar'}}}> 
+                 <Link to={{ pathname: '/articleDetail/'+ this.props.data.id}}> 
                     <div className="article-detail-fl">
                         <div className="fl">
                         {this.props.data.title}

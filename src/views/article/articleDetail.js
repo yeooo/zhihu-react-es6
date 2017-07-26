@@ -9,7 +9,8 @@ class ArticleDetail extends React.Component{
             title:'',
             articleImg:'',
             popularity:'',
-            comments:''
+            comments:'',
+            commentsData:''
         }
     }
     render(){
@@ -23,7 +24,7 @@ class ArticleDetail extends React.Component{
                     </div>
                 </div>
                 <div id="article-con"></div>
-                <BottomMenu popularity={this.state.popularity} comments={this.state.comments}/>
+                <BottomMenu commentsData={this.state.commentsData} cid={this.props.params.id}/>
             </div>
         )
     }
@@ -48,7 +49,8 @@ class ArticleDetail extends React.Component{
 			success: function(result){
                 _this.setState({
                     popularity: result.DES.popularity,
-                    comments: result.DES.comments
+                    comments: result.DES.comments,
+                    commentsData:result.DES
                 });
 			}
 		});

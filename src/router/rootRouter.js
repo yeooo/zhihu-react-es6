@@ -4,6 +4,7 @@ import {Router, Route, hashHistory, IndexRoute,Link} from 'react-router';
 const Home = (location, cb) => require.ensure([], () => cb(null, require('../views/home/home').default), 'Home');
 const Article = (location, cb) => require.ensure([], () => cb(null, require('../views/article/article').default), 'Article');
 const ArticleDetail = (location, cb) => require.ensure([], () => cb(null, require('../views/article/articleDetail').default), 'ArticleDetail');
+const Comments = (location, cb) => require.ensure([], () => cb(null, require('../views/article/comments').default), 'Comments');
 
 const RootRouter = (
     <Router history={hashHistory}>
@@ -12,6 +13,7 @@ const RootRouter = (
             <Route path="home" getComponent={Home} />
             <Route path="article" getComponent={Article} />
             <Route path="articleDetail(/:id)" getComponent={ArticleDetail} />
+            <Route path="comments(/:id)" getComponent={Comments} />
          </Route> 
     </Router>
 );

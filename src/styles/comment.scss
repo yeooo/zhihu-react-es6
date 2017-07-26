@@ -1,0 +1,102 @@
+.clearfix:after{content:".";display:block;font-size:0;height:0;clear:both;visibility:hidden}.c,.clearfix{zoom:1}
+.topBar{
+    height: 50px;
+    background-color: #00b7f5;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    font-size: .3rem;
+}
+.comment{
+    li{
+        border-bottom: 1px solid #e1e1e1;
+        display: flex;
+        .pic-con{
+            width: 1rem;
+            img{
+                width: .6rem;
+                height: .6rem;
+                padding: .2rem .2rem 0 .2rem;
+            }
+        }
+        .total-data{
+            width: 6.5rem;
+            padding-right: .2rem;
+        }
+        .user-data{
+            .name{
+                float: left;
+                display: block;
+                font-size: .24rem;
+                margin-top: .2rem;
+            }
+            .like{
+                display: block;
+                height: .5rem;
+                line-height: .5rem;
+                font-size: .25rem;
+                margin-top:.1rem;
+                float: right;
+                color: #666;
+                &:before{
+                    content: '';
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: .05rem;
+                    width: .35rem;
+                    height: .35rem;
+                    background: url('../images/bottomMenu/dianzan.png') no-repeat left top;
+                    background-size: 100%;
+                }
+            }
+        }
+        .time{
+            color: #c2c2c2;
+        }
+        .comment-p{
+            font-size: .25rem;
+            .comment-detail{
+                // height: 1.1rem;
+                overflow-y: hidden;
+            }
+            .viewmore{
+                float: right;
+                background-color: #698ebf;
+                color: #fff;
+                padding: .05rem;
+                display: none;
+            }
+        }
+    }
+    .title{
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        height: .7rem;
+        line-height: .7rem;
+        font-size: .27rem;
+        font-weight: bold;
+        padding-left: .2rem;
+        border-bottom: 1px solid #e1e1e1;
+    }
+    .arrow{
+        width: .5rem;
+        height: .5rem;
+        float: right;
+        margin-top: .1rem;
+        margin-right: .2rem;
+    }
+    .arrow-down{
+        background: url('../images/comments/down_arrow.png') no-repeat center center;
+        background-size: 100%; 
+    }
+    .arrow-up{
+        background: url('../images/comments/up_arrow.png') no-repeat center center;
+        background-size: 100%; 
+    }
+}
+
+#short-ul{
+    display: none;
+}
