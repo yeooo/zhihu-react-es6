@@ -28,7 +28,7 @@ class ArticleList extends React.Component{
             hotNewList.push(<SingleArticle data = {value} key = {index}/>);
         });
         return(
-            <div>
+            <div id="articleList">
                 <ul className="article-container">
                      {hotNewList} 
                 </ul>

@@ -1,6 +1,87 @@
 .slider-nav{
-    height: 100px;
-    width: 100px;
-    background-color: red;
-    display: none
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: .3rem;
+    color: #fff;
+    z-index: 99;
+}
+.menu{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    left: .2rem;
+    top: 10px;
+    background: url('../../images/sliderNav/menu.png');
+    background-size: 100%;
+    // background-color: red;
+    // display: none
+}
+.menu-pannel{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 999;
+    color:#c1c1c1;
+    .menu-icon{
+        width: 50%;
+        display: flex;
+        background-color: #262932;
+    }
+    ul{
+        width: 50%;
+        background-color: #262932;
+        height: 100%;
+        z-index: 99;
+        position: absolute;
+        left: -50%;
+        transition:left .2s;
+        -moz-transition:left .2s; /* Firefox 4 */
+        -webkit-transition:left .2s; /* Safari and Chrome */
+        -o-transition:left .2s; /* Opera */
+        .hot-topic{
+            border-top:1px solid #1F222B;
+            border-bottom:1px solid #1F222B;
+        }
+        li{
+            padding-left: .3rem;
+            height: 50px;
+            line-height: 50px;
+            font-size: .24rem;
+            // border: 1px solid #fff;
+            .topic-icon{
+                float: right;
+                width: 20px;
+                height: 20px;
+                background: url('../../images/sliderNav/tab_right.png') no-repeat left top;
+                background-size: 50%;
+                margin-top: 15px;
+            }
+        }
+    }
+    .active{
+        left: 0;
+    }
+}
+#topbarbg{
+    background-color: #3F8CD0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 50px;
+    z-index: 0;
+    opacity: 0;
+    transition:opacity .2s;
+    -moz-transition:opacity .2s; /* Firefox 4 */
+    -webkit-transition:opacity .2s; /* Safari and Chrome */
+    -o-transition:opacity .2s; 
 }
