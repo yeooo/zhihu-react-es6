@@ -66,11 +66,11 @@
     padding: 0 40px;
     overflow: hidden;
     .question-title {
-        font-size: 22px;
+        font-size: .30rem;
         line-height: 1.4em;
         color: #222;
-        font-weight: bold;
-        margin: 25px 0;
+        font-weight: 500;
+        margin: .28rem 0;
     }
 }
 .meta {
@@ -103,6 +103,7 @@
     color: #444;
     line-height: 2em;
     margin: 10px 0 25px;
+    font-size: .26rem;
     a {
         color: #105CB6;
         text-decoration: none;
@@ -141,7 +142,7 @@ blockquote {
     .content {
         line-height: 1.6em;
         margin: 10px 0 20px;
-        font-size: 17px;
+        // font-size: 17px;
     }
     blockquote, sup {
         line-height: 1.4em;
