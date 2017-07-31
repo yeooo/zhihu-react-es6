@@ -6,7 +6,11 @@ import { Link } from 'react-router';
 class Topic extends React.Component{
 		render(){
 			return(
-				<li>{this.props.data.name} <span className="topic-icon"></span></li>
+				<li>
+					<Link to={{ pathname: '/themes/'+ this.props.data.id}}>{this.props.data.name} 
+						<span className="topic-icon"></span>
+					</Link>
+				</li>
 			)
 		}
 	}
@@ -21,6 +25,8 @@ class SliderNav extends React.Component {
 	showPannel(){
 		document.getElementById('menu-pannel').style.display = 'block';
 		document.getElementById('pannel-container').className  += ' active';
+		document.getElementById('slider-nav').style.marginLeft = '50%';
+		document.getElementById('articleList').style.marginLeft = '50%';
 	}
 	hideShow(e){
 		e.stopPropagation();
@@ -30,10 +36,12 @@ class SliderNav extends React.Component {
 		}else{
 			document.getElementById('pannel-container').className='pannel-container';
 			document.getElementById('menu-pannel').style.display = 'none';
+			document.getElementById('slider-nav').style.marginLeft = '0';
+			document.getElementById('articleList').style.marginLeft = '0';
 		}
 	}
-	stopD(e){
-		e.stopPropagation()
+	stopP(e){
+		e.stopPropagation();
 	}
 	componentWillMount(){
 		let _this = this;
@@ -55,12 +63,12 @@ class SliderNav extends React.Component {
 		});
 		return (
 			<div>
-				<div className="slider-nav">
+				<div className="slider-nav" id="slider-nav" style={{backgroundColor: this.props.color}}>
 					<div className="menu" onClick={this.showPannel}></div>
-					今日热闻
+					{this.props.title}
 				</div>
 				<div className="menu-pannel" id="menu-pannel" onClick = {this.hideShow}>
-					<div className="left-bar">
+					<div className="left-bar" onClick={this.stopP}>
 						<div>
 							<div className="user-part">
 								<span><img src="../images/user_pic_n.png" alt=""/></span>
@@ -81,8 +89,8 @@ class SliderNav extends React.Component {
 								</dt>
 							</div>
 						</div>
-						<ul onClick={this.stopD} className="pannel-container" id="pannel-container">
-							<li className="hot-topic">首页</li>
+						<ul className="pannel-container" id="pannel-container">
+							<li className="hot-topic"><a href="/">首页</a></li>
 							{themesList}
 						</ul>
 						<div className="bottom-menu-icon">
@@ -100,6 +108,8 @@ class SliderNav extends React.Component {
 }
 
 SliderNav.defaultProps = {
+	title:'今日热闻',
+	backgroundColor:''
 };
 
 export default SliderNav;

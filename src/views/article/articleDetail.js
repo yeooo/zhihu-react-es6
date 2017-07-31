@@ -1,6 +1,6 @@
-require('../../styles/articleDetail.scss')
-import React from 'react'
-import BottomMenu from '../../components/bottomMenu'
+require('../../styles/articleDetail.scss');
+import React from 'react';
+import BottomMenu from '../../components/bottomMenu';
 
 class ArticleDetail extends React.Component{
     constructor(props){

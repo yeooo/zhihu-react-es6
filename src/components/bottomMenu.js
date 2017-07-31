@@ -1,6 +1,7 @@
-require('../styles/components/bottomMenu.scss')
-import React from 'react'
-import { Link } from 'react-router'
+require('../styles/components/bottomMenu.scss');
+import React from 'react';
+import { Link } from 'react-router';
+
 class BottomMenu extends React.Component{
     constructor(props){
         super(props);

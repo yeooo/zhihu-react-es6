@@ -1,3 +1,9 @@
+#articleList{
+    transition:all .2s;
+    -moz-transition:all .2s; /* Firefox 4 */
+    -webkit-transition:all .2s; /* Safari and Chrome */
+    -o-transition:all .2s; /* Opera */
+}
 .article-container{
     padding: 0 .3rem;
 }
@@ -17,8 +23,8 @@
             color: #030303;
             letter-spacing: -0.18px;
             line-height: .43rem;
-            // margin: 0 .43rem;
             margin-top: .28rem;
+            overflow: hidden;
         }
         .fr{
             img{

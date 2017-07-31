@@ -1,5 +1,5 @@
-require('../../styles/comment.scss')
-import React from 'react'
+require('../../styles/comment.scss');
+import React from 'react';
 
 /**
  * 评论

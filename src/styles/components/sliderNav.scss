@@ -9,6 +9,10 @@
     font-size: .3rem;
     color: #fff;
     z-index: 99;
+    transition:all .2s;
+    -moz-transition:all .2s; /* Firefox 4 */
+    -webkit-transition:all .2s; /* Safari and Chrome */
+    -o-transition:all .2s; /* Opera */
 }
 .pannel-container{
     overflow-y: auto;
@@ -74,7 +78,6 @@
         z-index: 99;
         position: absolute;
         bottom: 50px;
-        // left: -50%;
         transition:left .2s;
         -moz-transition:left .2s; /* Firefox 4 */
         -webkit-transition:left .2s; /* Safari and Chrome */
@@ -88,6 +91,9 @@
             height: 50px;
             line-height: 50px;
             font-size: .24rem;
+            a{
+                color:#c1c1c1;
+            }
             .topic-icon{
                 float: right;
                 width: 20px;
@@ -140,11 +146,25 @@
         display: inline-block;
         width: 50%;
         text-align: center;
+        &:before{
+            content: '';
+            display: inline-block;
+            width: .4rem;
+            height: .4rem;
+            vertical-align:text-bottom;
+            margin-right: .1rem;
+        }
     }
     .off-line{
-
+        &:before{
+            background: url('../../images/sliderNav/bell.png') no-repeat center center;
+            background-size: 80%;
+        }
     }
     .night-mode{
-
+        &:before{
+            background: url('../../images/sliderNav/bell.png') no-repeat center center;
+            background-size: 80%;
+        }
     }
 }
