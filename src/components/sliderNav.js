@@ -25,8 +25,7 @@ class SliderNav extends React.Component {
 	showPannel(){
 		document.getElementById('menu-pannel').style.display = 'block';
 		document.getElementById('pannel-container').className  += ' active';
-		document.getElementById('slider-nav').style.marginLeft = '50%';
-		document.getElementById('articleList').style.marginLeft = '50%';
+		document.getElementById('home-page').style.marginLeft = '50%';
 	}
 	hideShow(e){
 		e.stopPropagation();
@@ -36,8 +35,7 @@ class SliderNav extends React.Component {
 		}else{
 			document.getElementById('pannel-container').className='pannel-container';
 			document.getElementById('menu-pannel').style.display = 'none';
-			document.getElementById('slider-nav').style.marginLeft = '0';
-			document.getElementById('articleList').style.marginLeft = '0';
+			document.getElementById('home-page').style.marginLeft = '0';
 		}
 	}
 	stopP(e){

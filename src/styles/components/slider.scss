@@ -1,4 +1,19 @@
 .slider{
     height:3.5rem;
+    width: 100%;
+    position: relative;
     background-color: #ccc;
+    ul{
+        height: 100%;
+        width: auto;
+        display: flex;
+        background-color: #ccc;
+        li{
+            display: inline-block;
+            width: 7.5rem;
+            height: 100%;
+            background-color: pink;
+            border: 1px solid red;
+        }
+    }
 }

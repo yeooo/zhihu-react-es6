@@ -56,9 +56,11 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div className="home-page" onTouchMove={this.changeTopBarColor} onTouchEnd={this.updateTopBarColor}>
+				<div id="home-page" className="home-container">
+					<Slider />
+					<ArticleList ArticleList={this.state.hotnews}/>
+				</div>
 				<SliderNav />
-				<Slider />
-				<ArticleList ArticleList={this.state.hotnews}/>
 			</div>
 		);
 	}
